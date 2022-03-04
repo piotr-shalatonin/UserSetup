@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  UserSetup
+
+  Created by Piotr Shalatonin on 4.03.22.
+  
+*/
+
+"welcomeViewController.signInButton" = "I AM NEW TO MYNETDIARY";
