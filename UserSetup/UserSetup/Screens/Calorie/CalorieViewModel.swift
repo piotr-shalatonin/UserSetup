@@ -7,6 +7,6 @@
 
 import Foundation
 
-class CalorieViewModel {
+class CalorieViewModel: BaseViewModel {
     
 }

@@ -7,6 +7,10 @@
 
 import Foundation
 
-class GenderViewModel {
+class GenderViewModel: BaseViewModel {
+    
+    func setGender(gender: Gender) {
+        user.gender = gender
+    }
     
 }

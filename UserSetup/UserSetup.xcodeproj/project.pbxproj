@@ -36,6 +36,8 @@
 		5497A00E27D4B36600902BA9 /* GlobalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00D27D4B36600902BA9 /* GlobalUtils.swift */; };
 		5497A01027D4B3C900902BA9 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00F27D4B3C900902BA9 /* String+Utils.swift */; };
 		54A0947B27D52A5300A00B4D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947A27D52A5300A00B4D /* CustomLabel.swift */; };
+		54A0947E27D5451900A00B4D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947D27D5451900A00B4D /* StorageManager.swift */; };
+		54A0948027D55D8B00A00B4D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		5497A00D27D4B36600902BA9 /* GlobalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtils.swift; sourceTree = "<group>"; };
 		5497A00F27D4B3C900902BA9 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		54A0947A27D52A5300A00B4D /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		54A0947D27D5451900A00B4D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		546B950D27D11754006A2BD3 /* UserSetup */ = {
 			isa = PBXGroup;
 			children = (
+				54A0947C27D544ED00A00B4D /* Storage */,
 				54979FF127D49D0A00902BA9 /* Global */,
 				546B954527D1EE6E006A2BD3 /* Controls */,
 				5497A00827D4A0BF00902BA9 /* Screens */,
@@ -263,8 +268,17 @@
 				54979FF927D49F0400902BA9 /* Weight */,
 				54979FFF27D49FF500902BA9 /* Birth */,
 				54979FFE27D49F9F00902BA9 /* Calorie */,
+				54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		54A0947C27D544ED00A00B4D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				54A0947D27D5451900A00B4D /* StorageManager.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,8 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54979FF627D49EAA00902BA9 /* ImportViewController.swift in Sources */,
+				54A0948027D55D8B00A00B4D /* BaseViewModel.swift in Sources */,
 				54979FF027D49C7400902BA9 /* GenderViewModel.swift in Sources */,
 				546B954727D1EE9A006A2BD3 /* CustomButton.swift in Sources */,
+				54A0947E27D5451900A00B4D /* StorageManager.swift in Sources */,
 				546B954C27D1F141006A2BD3 /* WelcomeViewModel.swift in Sources */,
 				546B954A27D1F112006A2BD3 /* WelcomeViewController.swift in Sources */,
 				54979FEE27D49C6300902BA9 /* GenderViewController.swift in Sources */,

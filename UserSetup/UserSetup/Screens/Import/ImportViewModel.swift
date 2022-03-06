@@ -7,6 +7,5 @@
 
 import Foundation
 
-class ImportViewModel {
-    
+class ImportViewModel: BaseViewModel {
 }

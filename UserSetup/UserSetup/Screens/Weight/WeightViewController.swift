@@ -33,4 +33,15 @@ class WeightViewController: UIViewController {
         performSegue(withIdentifier: GlobalConstants.UI.birthSegue, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch (identifier, segue.destination) {
+            case (GlobalConstants.UI.birthSegue, let viewController as BirthViewController):
+                viewController.viewModel = BirthViewModel()
+            default:
+                break
+            }
+        }
+    }
+    
 }

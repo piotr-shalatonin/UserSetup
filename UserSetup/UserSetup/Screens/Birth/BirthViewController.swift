@@ -17,6 +17,8 @@ class BirthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        localize()
+        
         birthdayTextField.inputView = datePicker
     }
     
@@ -30,5 +32,16 @@ class BirthViewController: UIViewController {
     
     private func openCalorieScreen() {
         performSegue(withIdentifier: GlobalConstants.UI.calorieSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch (identifier, segue.destination) {
+            case (GlobalConstants.UI.calorieSegue, let viewController as CalorieViewController):
+                viewController.viewModel = CalorieViewModel()
+            default:
+                break
+            }
+        }
     }
 }

@@ -21,14 +21,31 @@ class GenderViewController: UIViewController {
     }
     
     @IBAction func maleButtonTapped(_ sender: Any) {
-        openImportScreen()
+        genderButtonTapped(for: .male)
     }
     
     @IBAction func femaleButtonTapped(_ sender: Any) {
+        genderButtonTapped(for: .female)
+    }
+    
+    func genderButtonTapped(for gender: Gender) {
+        viewModel.setGender(gender: gender)
+        viewModel.saveData()
         openImportScreen()
     }
     
     private func openImportScreen() {
         performSegue(withIdentifier: GlobalConstants.UI.importSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch (identifier, segue.destination) {
+            case (GlobalConstants.UI.importSegue, let viewController as ImportViewController):
+                viewController.viewModel = ImportViewModel()
+            default:
+                break
+            }
+        }
     }
 }

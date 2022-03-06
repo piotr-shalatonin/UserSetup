@@ -20,4 +20,15 @@ class WelcomeViewController: UIViewController {
     private func localize() {
         title = "welcomeScreen.title".localized
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch (identifier, segue.destination) {
+            case (GlobalConstants.UI.genderSegue, let viewController as GenderViewController):
+                viewController.viewModel = GenderViewModel()
+            default:
+                break
+            }
+        }
+    }
 }

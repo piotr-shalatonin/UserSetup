@@ -7,14 +7,18 @@
 
 import Foundation
 
-class WeightViewModel {
+class WeightViewModel: BaseViewModel {
+    
     var helpLabelText: String {
-//        "weightScreen.weightHelpLabel".localized
         String(
             format: "weightScreen.weightHelpLabel".localized,
             "pounds",
             String(198),
             String(220.5)
         )
+    }
+    
+    func setWeight(weight: Float) {
+        user.weight = weight
     }
 }

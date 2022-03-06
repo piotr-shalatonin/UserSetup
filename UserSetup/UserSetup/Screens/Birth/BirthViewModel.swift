@@ -7,6 +7,6 @@
 
 import Foundation
 
-class BirthViewModel {
+class BirthViewModel: BaseViewModel {
     
 }
