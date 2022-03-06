@@ -14,6 +14,7 @@ class ImportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         localize()
+        viewModel.loadData()
     }
     
     private func localize() {

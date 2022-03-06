@@ -6,8 +6,12 @@
   
 */
 
+"common.button.ok" = "OK";
 "common.kg" = "kg";
 "common.pounds" = "pounds";
+
+"common.alert.title" = "Alert";
+"common.validationMessage" = "Please enter valid value";
 
 "welcomeScreen.title" = "Welcome";
 "welcomeScreen.signInButton" = "I AM NEW TO MYNETDIARY";
@@ -23,9 +27,11 @@
 "weightScreen.title" = "Your Current Weight";
 "weightScreen.weightHelpLabel" = "Enter your current weight in %@ as of today, e.g. %@ or %@";
 "weightScreen.metricSystemLabel" = "Use metric system";
+"weightScreen.validationMessage" = "Minimum weight supported by MyNetDiary is %@ %@";
 "weightScreen.nextButton" = "NEXT";
 
 "birthScreen.title" = "When You Were Born?";
+"birthScreen.validationMessage" = "Unfortunately, due to children privacy laws, MyNetDiary is not allowed to be used by children under 13 years old";
 "birthScreen.nextButton" = "NEXT";
 
 "calorieScreen.title" = "Daily Calorie Budget";

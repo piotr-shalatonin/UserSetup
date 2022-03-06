@@ -13,8 +13,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        localize()
         
+        localize()
     }
     
     private func localize() {

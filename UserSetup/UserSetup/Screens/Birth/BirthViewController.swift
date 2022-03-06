@@ -19,7 +19,27 @@ class BirthViewController: UIViewController {
         
         localize()
         
+        setupControls()
+        
+        viewModel.loadData()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setUserData()
+    }
+    
+    private func setupControls() {
         birthdayTextField.inputView = datePicker
+        
+        datePicker.addTarget(self, action: #selector(handleDatePicker), for: .valueChanged)
+    }
+    
+    @objc func handleDatePicker(_ datePicker: UIDatePicker) {
+        getUserData()
+        setUserData()
     }
     
     private func localize() {
@@ -27,6 +47,17 @@ class BirthViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        getUserData()
+        
+        if !viewModel.validate() {
+            showAlert(
+                title: "common.alert.title".localized,
+                message: "birthScreen.validationMessage".localized
+            )
+            return
+        }
+        viewModel.saveData()
+
         openCalorieScreen()
     }
     
@@ -43,5 +74,17 @@ class BirthViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    func setUserData() {
+        if let dateOfBirth = viewModel.user.dateOfBirth {
+            datePicker.date = dateOfBirth
+        }
+        
+        birthdayTextField.text = GlobalUtils.string(from: datePicker.date, format: GlobalConstants.UI.dateOfBirthFormat)
+    }
+    
+    func getUserData() {
+        viewModel.user.dateOfBirth = datePicker.date
     }
 }

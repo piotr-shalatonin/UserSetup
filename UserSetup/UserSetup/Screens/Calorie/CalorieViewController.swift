@@ -16,7 +16,14 @@ class CalorieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "calorieScreen.title".localized
+        
+        localize()
+        
+        viewModel.loadData()
+    }
+    
+    private func localize() {
+        title = "calorieScreen.title".localized
     }
     
     @IBAction func finishButtonTapped(_ sender: Any) {

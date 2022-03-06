@@ -14,10 +14,9 @@ class BaseViewModel {
     
     init(storageManager: StorageManagerProtocol = StorageManager()) {
         self.storageManager = storageManager
-        loadData()
     }
     
-    private func loadData() {
+    func loadData() {
         user = storageManager.getUser()
     }
     

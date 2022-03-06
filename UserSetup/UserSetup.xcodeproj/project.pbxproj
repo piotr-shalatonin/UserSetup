@@ -38,6 +38,7 @@
 		54A0947B27D52A5300A00B4D /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947A27D52A5300A00B4D /* CustomLabel.swift */; };
 		54A0947E27D5451900A00B4D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947D27D5451900A00B4D /* StorageManager.swift */; };
 		54A0948027D55D8B00A00B4D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */; };
+		54A0948227D5680700A00B4D /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948127D5680700A00B4D /* UIViewController+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		54A0947A27D52A5300A00B4D /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		54A0947D27D5451900A00B4D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		54A0948127D5680700A00B4D /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				5497A00B27D4A7D200902BA9 /* Color+Constants.swift */,
 				5497A00D27D4B36600902BA9 /* GlobalUtils.swift */,
 				5497A00F27D4B3C900902BA9 /* String+Utils.swift */,
+				54A0948127D5680700A00B4D /* UIViewController+Utils.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				5497A00127D4A03000902BA9 /* BirthViewController.swift in Sources */,
 				546B950F27D11754006A2BD3 /* AppDelegate.swift in Sources */,
 				54979FFB27D49F2F00902BA9 /* WeightViewController.swift in Sources */,
+				54A0948227D5680700A00B4D /* UIViewController+Utils.swift in Sources */,
 				54979FFD27D49F4A00902BA9 /* WeightViewModel.swift in Sources */,
 				5497A00527D4A05200902BA9 /* CalorieViewController.swift in Sources */,
 				54A0947B27D52A5300A00B4D /* CustomLabel.swift in Sources */,

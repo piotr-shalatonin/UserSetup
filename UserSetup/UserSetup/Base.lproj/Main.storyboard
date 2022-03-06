@@ -225,6 +225,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OpV-Mv-M8h">
                                                 <rect key="frame" x="161.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="useMetricSwitchTapped:" destination="JFs-qf-vrc" eventType="valueChanged" id="NgD-Lm-2Gi"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
