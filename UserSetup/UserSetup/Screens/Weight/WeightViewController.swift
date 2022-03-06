@@ -11,9 +11,18 @@ import UIKit
 class WeightViewController: UIViewController {
     var viewModel: WeightViewModel!
     
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var helpLabel: UILabel!
+    @IBOutlet weak var useMetricSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "weightScreen.title".localized
+        localize()
+    }
+    
+    private func localize() {
+        title = "weightScreen.title".localized
+        helpLabel.text = viewModel.helpLabelText
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

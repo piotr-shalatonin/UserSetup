@@ -11,6 +11,9 @@ import UIKit
 class CalorieViewController: UIViewController {
     var viewModel: CalorieViewModel!
     
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "calorieScreen.title".localized

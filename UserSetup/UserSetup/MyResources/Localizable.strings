@@ -6,6 +6,9 @@
   
 */
 
+"common.kg" = "kg";
+"common.pounds" = "pounds";
+
 "welcomeScreen.title" = "Welcome";
 "welcomeScreen.signInButton" = "I AM NEW TO MYNETDIARY";
 
@@ -18,6 +21,8 @@
 "importScreen.skipButton" = "SKIP";
 
 "weightScreen.title" = "Your Current Weight";
+"weightScreen.weightHelpLabel" = "Enter your current weight in %@ as of today, e.g. %@ or %@";
+"weightScreen.metricSystemLabel" = "Use metric system";
 "weightScreen.nextButton" = "NEXT";
 
 "birthScreen.title" = "When You Were Born?";

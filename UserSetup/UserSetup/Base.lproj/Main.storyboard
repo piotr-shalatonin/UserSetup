@@ -35,24 +35,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ira-xY-lsa" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="314" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="welcomeScreen.signInButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="E99-WT-u6L" kind="show" identifier="genderSegue" id="lx5-MD-Sgo"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8XD-ys-7Th">
+                                <rect key="frame" x="50" y="138" width="314" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ira-xY-lsa" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="welcomeScreen.signInButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="E99-WT-u6L" kind="show" identifier="genderSegue" id="lx5-MD-Sgo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ira-xY-lsa" firstAttribute="leading" secondItem="8XD-ys-7Th" secondAttribute="leading" id="7Pv-ey-Lwl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ira-xY-lsa" secondAttribute="trailing" id="URM-en-mgO"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ira-xY-lsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lCv-6F-Fr0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ira-xY-lsa" secondAttribute="bottom" constant="50" id="uy0-DK-WaK"/>
-                            <constraint firstItem="ira-xY-lsa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v2A-wC-fGp"/>
+                            <constraint firstItem="8XD-ys-7Th" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="00E-5Z-OVR"/>
+                            <constraint firstItem="8XD-ys-7Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ibv-cP-QXr"/>
+                            <constraint firstItem="8XD-ys-7Th" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="p9u-qF-L2I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ttL-e9-Dxi"/>
@@ -69,38 +78,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydn-57-m4G" userLabel="Male Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="132" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Male"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.maleButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="maleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="G5r-Fr-PHV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gln-AT-dka" userLabel="Female Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="232" y="781" width="132" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Female"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.femaleButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="femaleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="tn9-Kj-xaX"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="k0r-Gh-7LW">
+                                <rect key="frame" x="50" y="138" width="314" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-1n-sfI">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydn-57-m4G" userLabel="Male Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Male"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.maleButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="maleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="G5r-Fr-PHV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gln-AT-dka" userLabel="Female Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                                <rect key="frame" x="182" y="0.0" width="132" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Female"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.femaleButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="femaleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="tn9-Kj-xaX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJh-V3-hh1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gln-AT-dka" firstAttribute="leading" secondItem="ydn-57-m4G" secondAttribute="trailing" constant="50" id="Ji4-1F-L48"/>
-                            <constraint firstItem="eJh-V3-hh1" firstAttribute="bottom" secondItem="ydn-57-m4G" secondAttribute="bottom" constant="50" id="Zdy-gt-lir"/>
-                            <constraint firstItem="ydn-57-m4G" firstAttribute="width" secondItem="gln-AT-dka" secondAttribute="width" id="cpf-6v-fSX"/>
-                            <constraint firstItem="gln-AT-dka" firstAttribute="centerY" secondItem="ydn-57-m4G" secondAttribute="centerY" id="sdk-Wg-bct"/>
-                            <constraint firstItem="ydn-57-m4G" firstAttribute="leading" secondItem="eJh-V3-hh1" secondAttribute="leading" constant="50" id="zrr-Kz-DDo"/>
-                            <constraint firstItem="eJh-V3-hh1" firstAttribute="trailing" secondItem="gln-AT-dka" secondAttribute="trailing" constant="50" id="zsg-IE-c1H"/>
+                            <constraint firstItem="k0r-Gh-7LW" firstAttribute="centerX" secondItem="00a-Kn-Ps1" secondAttribute="centerX" id="OkZ-C7-aYc"/>
+                            <constraint firstItem="k0r-Gh-7LW" firstAttribute="top" secondItem="eJh-V3-hh1" secondAttribute="top" constant="50" id="hCp-g4-wuZ"/>
+                            <constraint firstItem="k0r-Gh-7LW" firstAttribute="leading" secondItem="eJh-V3-hh1" secondAttribute="leading" constant="50" id="utl-U2-2Pj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7TP-dC-adW"/>
@@ -120,38 +136,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-eJ-PRY" userLabel="Import Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="132" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Import"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.importButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="importButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="HAk-tI-UIV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSi-Ba-2m4" userLabel="Skip Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="232" y="781" width="132" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.skipButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="skipButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="bI5-gZ-YMi"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="thb-PO-j5O">
+                                <rect key="frame" x="50" y="138" width="314" height="31"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="7PE-Pj-bdG">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-eJ-PRY" userLabel="Import Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Import"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.importButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="importButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="HAk-tI-UIV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSi-Ba-2m4" userLabel="Skip Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                                <rect key="frame" x="182" y="0.0" width="132" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.skipButton"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="skipButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="bI5-gZ-YMi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zvv-uN-SoT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zvv-uN-SoT" firstAttribute="trailing" secondItem="jSi-Ba-2m4" secondAttribute="trailing" constant="50" id="6Zn-ru-Y55"/>
-                            <constraint firstItem="jSi-Ba-2m4" firstAttribute="leading" secondItem="OI9-eJ-PRY" secondAttribute="trailing" constant="50" id="RtQ-vd-qNT"/>
-                            <constraint firstItem="OI9-eJ-PRY" firstAttribute="leading" secondItem="Zvv-uN-SoT" secondAttribute="leading" constant="50" id="S9u-JU-cbC"/>
-                            <constraint firstItem="OI9-eJ-PRY" firstAttribute="width" secondItem="jSi-Ba-2m4" secondAttribute="width" id="aXK-md-Xrr"/>
-                            <constraint firstItem="Zvv-uN-SoT" firstAttribute="bottom" secondItem="OI9-eJ-PRY" secondAttribute="bottom" constant="50" id="gaX-LI-13F"/>
-                            <constraint firstItem="jSi-Ba-2m4" firstAttribute="centerY" secondItem="OI9-eJ-PRY" secondAttribute="centerY" id="gfZ-aN-4Zv"/>
+                            <constraint firstItem="thb-PO-j5O" firstAttribute="top" secondItem="Zvv-uN-SoT" secondAttribute="top" constant="50" id="IUx-ke-kg2"/>
+                            <constraint firstItem="thb-PO-j5O" firstAttribute="centerX" secondItem="ApP-uQ-uhe" secondAttribute="centerX" id="K8A-kw-lpv"/>
+                            <constraint firstItem="thb-PO-j5O" firstAttribute="leading" secondItem="Zvv-uN-SoT" secondAttribute="leading" constant="50" id="zPc-bf-YTl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Aml-0T-aXz"/>
@@ -171,28 +194,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-VY-brL" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="314" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="weightScreen.nextButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="JFs-qf-vrc" eventType="touchUpInside" id="4MV-b8-tRV"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-fb-Zz1">
+                                <rect key="frame" x="50" y="138" width="314" height="266.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3s-WV-h3f" userLabel="Weight text field">
+                                        <rect key="frame" x="132" y="0.0" width="50" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Kxr-C9-Gor"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your current weight" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-HN-aM0" userLabel="Help label">
+                                        <rect key="frame" x="60.5" y="84" width="193" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1VP-eY-KTZ" userLabel="Metric Stack View">
+                                        <rect key="frame" x="52" y="154.5" width="210.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use metric system" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgN-es-7Vt" customClass="CustomLabel" customModule="UserSetup" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="weightScreen.metricSystemLabel"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OpV-Mv-M8h">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-VY-brL" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="235.5" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="weightScreen.nextButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="JFs-qf-vrc" eventType="touchUpInside" id="4MV-b8-tRV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Idr-VY-brL" firstAttribute="leading" secondItem="bCf-fb-Zz1" secondAttribute="leading" id="DLA-eo-zVI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HS6-Rv-ZLO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Idr-VY-brL" firstAttribute="centerX" secondItem="ab9-Vu-9vi" secondAttribute="centerX" id="WCb-tr-BQy"/>
-                            <constraint firstItem="HS6-Rv-ZLO" firstAttribute="bottom" secondItem="Idr-VY-brL" secondAttribute="bottom" constant="50" id="g2y-2e-1Oi"/>
-                            <constraint firstItem="Idr-VY-brL" firstAttribute="leading" secondItem="HS6-Rv-ZLO" secondAttribute="leading" constant="50" id="haA-PI-BmR"/>
+                            <constraint firstItem="bCf-fb-Zz1" firstAttribute="top" secondItem="HS6-Rv-ZLO" secondAttribute="top" constant="50" id="aQm-5R-YPz"/>
+                            <constraint firstItem="bCf-fb-Zz1" firstAttribute="leading" secondItem="HS6-Rv-ZLO" secondAttribute="leading" constant="50" id="ke2-5c-jNI"/>
+                            <constraint firstItem="bCf-fb-Zz1" firstAttribute="centerX" secondItem="ab9-Vu-9vi" secondAttribute="centerX" id="zQe-PG-GpV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NRQ-3h-3gW"/>
                     <connections>
+                        <outlet property="helpLabel" destination="Qa3-HN-aM0" id="hnM-7q-vBM"/>
+                        <outlet property="useMetricSwitch" destination="OpV-Mv-M8h" id="KJB-hY-igV"/>
+                        <outlet property="weightTextField" destination="R3s-WV-h3f" id="2Rk-NZ-REB"/>
                         <segue destination="hlm-O1-deK" kind="show" identifier="birthSegue" id="fVl-g4-qo8"/>
                     </connections>
                 </viewController>
@@ -208,32 +273,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1M-d8-dgm" userLabel="Next Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="314" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="birthScreen.nextButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="hlm-O1-deK" eventType="touchUpInside" id="vLd-ha-Qmq"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="2Jp-E8-vbk">
+                                <rect key="frame" x="50" y="138" width="314" height="115"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giV-TL-q7w">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1M-d8-dgm" userLabel="Next Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="birthScreen.nextButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="hlm-O1-deK" eventType="touchUpInside" id="vLd-ha-Qmq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P1M-d8-dgm" firstAttribute="leading" secondItem="2Jp-E8-vbk" secondAttribute="leading" id="CuR-Qw-eIq"/>
+                                    <constraint firstItem="giV-TL-q7w" firstAttribute="leading" secondItem="2Jp-E8-vbk" secondAttribute="leading" id="kRF-A9-n14"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GHe-ce-cNI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P1M-d8-dgm" firstAttribute="centerX" secondItem="N6e-Jb-ztq" secondAttribute="centerX" id="HJ3-z5-an5"/>
-                            <constraint firstItem="P1M-d8-dgm" firstAttribute="leading" secondItem="GHe-ce-cNI" secondAttribute="leading" constant="50" id="fRV-IR-G0B"/>
-                            <constraint firstItem="GHe-ce-cNI" firstAttribute="bottom" secondItem="P1M-d8-dgm" secondAttribute="bottom" constant="50" id="yKH-kK-aVl"/>
+                            <constraint firstItem="2Jp-E8-vbk" firstAttribute="leading" secondItem="GHe-ce-cNI" secondAttribute="leading" constant="50" id="EwP-Pe-zcG"/>
+                            <constraint firstItem="2Jp-E8-vbk" firstAttribute="top" secondItem="GHe-ce-cNI" secondAttribute="top" constant="50" id="hHm-ju-xYL"/>
+                            <constraint firstItem="2Jp-E8-vbk" firstAttribute="centerX" secondItem="N6e-Jb-ztq" secondAttribute="centerX" id="sUy-RC-NXr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y6T-Er-fdp"/>
                     <connections>
+                        <outlet property="birthdayTextField" destination="giV-TL-q7w" id="Qj1-Wv-JuA"/>
+                        <outlet property="datePicker" destination="ZIU-N5-NMA" id="9B4-yz-UXo"/>
                         <segue destination="Zbg-w8-PK3" kind="show" identifier="calorieSegue" id="Gll-H9-Zi9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okH-ei-WMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" id="ZIU-N5-NMA">
+                    <rect key="frame" x="0.0" y="0.0" width="314" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="4481" y="72"/>
         </scene>
@@ -245,27 +330,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkP-ND-Liy" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="781" width="314" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Finish"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="calorieScreen.finishButton"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="finishButtonTapped:" destination="Zbg-w8-PK3" eventType="touchUpInside" id="td7-AJ-KSy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-0h-HdR">
+                                <rect key="frame" x="50" y="138" width="314" height="193.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3L-ty-mij">
+                                        <rect key="frame" x="146" y="0.0" width="22" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-Dr-GjI">
+                                        <rect key="frame" x="127.5" y="92" width="59.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkP-ND-Liy" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162.5" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="calorieScreen.finishButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="finishButtonTapped:" destination="Zbg-w8-PK3" eventType="touchUpInside" id="td7-AJ-KSy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IkP-ND-Liy" firstAttribute="leading" secondItem="SjU-0h-HdR" secondAttribute="leading" id="K8z-HZ-zBk"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Edo-rd-604"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Edo-rd-604" firstAttribute="bottom" secondItem="IkP-ND-Liy" secondAttribute="bottom" constant="50" id="1x6-bx-6fP"/>
-                            <constraint firstItem="IkP-ND-Liy" firstAttribute="centerX" secondItem="JJ7-4o-Mm6" secondAttribute="centerX" id="3vl-xm-2Mf"/>
-                            <constraint firstItem="IkP-ND-Liy" firstAttribute="leading" secondItem="Edo-rd-604" secondAttribute="leading" constant="50" id="Sxy-QE-YTM"/>
+                            <constraint firstItem="SjU-0h-HdR" firstAttribute="leading" secondItem="Edo-rd-604" secondAttribute="leading" constant="50" id="rFb-j2-3eq"/>
+                            <constraint firstItem="SjU-0h-HdR" firstAttribute="top" secondItem="Edo-rd-604" secondAttribute="top" constant="50" id="tSx-E4-ybU"/>
+                            <constraint firstItem="SjU-0h-HdR" firstAttribute="centerX" secondItem="JJ7-4o-Mm6" secondAttribute="centerX" id="txa-84-oXR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vlS-2r-Muh"/>
+                    <connections>
+                        <outlet property="budgetLabel" destination="z3L-ty-mij" id="Ikd-Md-oVN"/>
+                        <outlet property="caloriesLabel" destination="j8Y-Dr-GjI" id="teO-61-bTz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JT0-uG-k9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

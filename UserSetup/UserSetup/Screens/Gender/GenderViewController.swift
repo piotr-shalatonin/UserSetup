@@ -13,7 +13,11 @@ class GenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "genderScreen.title".localized
+        localize()
+    }
+    
+    private func localize() {
+        title = "genderScreen.title".localized
     }
     
     @IBAction func maleButtonTapped(_ sender: Any) {

@@ -11,9 +11,17 @@ import UIKit
 class BirthViewController: UIViewController {
     var viewModel: BirthViewModel!
     
+    @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "birthScreen.title".localized
+        
+        birthdayTextField.inputView = datePicker
+    }
+    
+    private func localize() {
+        title = "birthScreen.title".localized
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

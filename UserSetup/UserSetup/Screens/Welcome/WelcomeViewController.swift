@@ -13,6 +13,11 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "welcomeScreen.title".localized
+        localize()
+        
+    }
+    
+    private func localize() {
+        title = "welcomeScreen.title".localized
     }
 }
