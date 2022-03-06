@@ -21,14 +21,7 @@ class CustomButton: UIButton {
     }
     
     private func customize() {
-        backgroundColor = UIColor.green
-    }
-}
-
-extension String {
-    var localized: String {
-        get {
-            return NSLocalizedString(self, comment: "")
-        }
+        backgroundColor = .greenButton
+        setTitleColor(.white, for: .normal)
     }
 }

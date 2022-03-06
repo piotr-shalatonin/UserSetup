@@ -6,4 +6,22 @@
   
 */
 
-"welcomeViewController.signInButton" = "I AM NEW TO MYNETDIARY";
+"welcomeScreen.title" = "Welcome";
+"welcomeScreen.signInButton" = "I AM NEW TO MYNETDIARY";
+
+"genderScreen.title" = "Get Started";
+"genderScreen.maleButton" = "MALE";
+"genderScreen.femaleButton" = "FEMALE";
+
+"importScreen.title" = "Health App Import";
+"importScreen.importButton" = "IMPORT";
+"importScreen.skipButton" = "SKIP";
+
+"weightScreen.title" = "Your Current Weight";
+"weightScreen.nextButton" = "NEXT";
+
+"birthScreen.title" = "When You Were Born?";
+"birthScreen.nextButton" = "NEXT";
+
+"calorieScreen.title" = "Daily Calorie Budget";
+"calorieScreen.finishButton" = "FINISH";

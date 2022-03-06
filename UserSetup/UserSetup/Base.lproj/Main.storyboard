@@ -35,22 +35,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ira-xY-lsa" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
-                                <rect key="frame" x="50" y="432.5" width="314" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ira-xY-lsa" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="welcomeViewController.signInButton"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="welcomeScreen.signInButton"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="E99-WT-u6L" kind="show" identifier="genderSegue" id="lx5-MD-Sgo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ira-xY-lsa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JsO-sH-2xZ"/>
                             <constraint firstItem="ira-xY-lsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lCv-6F-Fr0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ira-xY-lsa" secondAttribute="bottom" constant="50" id="uy0-DK-WaK"/>
                             <constraint firstItem="ira-xY-lsa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v2A-wC-fGp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ira-xY-lsa" secondAttribute="trailing" constant="50" id="xvv-D9-UzV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ttL-e9-Dxi"/>
@@ -58,6 +60,216 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="71.651785714285708"/>
+        </scene>
+        <!--Gender View Controller-->
+        <scene sceneID="EXo-1W-gxE">
+            <objects>
+                <viewController id="E99-WT-u6L" customClass="GenderViewController" customModule="UserSetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="00a-Kn-Ps1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydn-57-m4G" userLabel="Male Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="132" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Male"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.maleButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="maleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="G5r-Fr-PHV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gln-AT-dka" userLabel="Female Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="232" y="781" width="132" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Female"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="genderScreen.femaleButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="femaleButtonTapped:" destination="E99-WT-u6L" eventType="touchUpInside" id="tn9-Kj-xaX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eJh-V3-hh1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gln-AT-dka" firstAttribute="leading" secondItem="ydn-57-m4G" secondAttribute="trailing" constant="50" id="Ji4-1F-L48"/>
+                            <constraint firstItem="eJh-V3-hh1" firstAttribute="bottom" secondItem="ydn-57-m4G" secondAttribute="bottom" constant="50" id="Zdy-gt-lir"/>
+                            <constraint firstItem="ydn-57-m4G" firstAttribute="width" secondItem="gln-AT-dka" secondAttribute="width" id="cpf-6v-fSX"/>
+                            <constraint firstItem="gln-AT-dka" firstAttribute="centerY" secondItem="ydn-57-m4G" secondAttribute="centerY" id="sdk-Wg-bct"/>
+                            <constraint firstItem="ydn-57-m4G" firstAttribute="leading" secondItem="eJh-V3-hh1" secondAttribute="leading" constant="50" id="zrr-Kz-DDo"/>
+                            <constraint firstItem="eJh-V3-hh1" firstAttribute="trailing" secondItem="gln-AT-dka" secondAttribute="trailing" constant="50" id="zsg-IE-c1H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7TP-dC-adW"/>
+                    <connections>
+                        <segue destination="faE-8b-Pug" kind="show" identifier="importSegue" id="7py-1r-ocb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99p-Dy-AFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="72"/>
+        </scene>
+        <!--Import View Controller-->
+        <scene sceneID="Q4D-WK-Wnh">
+            <objects>
+                <viewController id="faE-8b-Pug" customClass="ImportViewController" customModule="UserSetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ApP-uQ-uhe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-eJ-PRY" userLabel="Import Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="132" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Import"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.importButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="importButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="HAk-tI-UIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSi-Ba-2m4" userLabel="Skip Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="232" y="781" width="132" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="importScreen.skipButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="faE-8b-Pug" eventType="touchUpInside" id="bI5-gZ-YMi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zvv-uN-SoT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvv-uN-SoT" firstAttribute="trailing" secondItem="jSi-Ba-2m4" secondAttribute="trailing" constant="50" id="6Zn-ru-Y55"/>
+                            <constraint firstItem="jSi-Ba-2m4" firstAttribute="leading" secondItem="OI9-eJ-PRY" secondAttribute="trailing" constant="50" id="RtQ-vd-qNT"/>
+                            <constraint firstItem="OI9-eJ-PRY" firstAttribute="leading" secondItem="Zvv-uN-SoT" secondAttribute="leading" constant="50" id="S9u-JU-cbC"/>
+                            <constraint firstItem="OI9-eJ-PRY" firstAttribute="width" secondItem="jSi-Ba-2m4" secondAttribute="width" id="aXK-md-Xrr"/>
+                            <constraint firstItem="Zvv-uN-SoT" firstAttribute="bottom" secondItem="OI9-eJ-PRY" secondAttribute="bottom" constant="50" id="gaX-LI-13F"/>
+                            <constraint firstItem="jSi-Ba-2m4" firstAttribute="centerY" secondItem="OI9-eJ-PRY" secondAttribute="centerY" id="gfZ-aN-4Zv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aml-0T-aXz"/>
+                    <connections>
+                        <segue destination="JFs-qf-vrc" kind="show" identifier="weightSegue" id="g4v-5Y-lbz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFI-CR-P6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2713" y="72"/>
+        </scene>
+        <!--Weight View Controller-->
+        <scene sceneID="JpH-zA-QDr">
+            <objects>
+                <viewController id="JFs-qf-vrc" customClass="WeightViewController" customModule="UserSetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ab9-Vu-9vi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-VY-brL" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="weightScreen.nextButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="JFs-qf-vrc" eventType="touchUpInside" id="4MV-b8-tRV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HS6-Rv-ZLO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Idr-VY-brL" firstAttribute="centerX" secondItem="ab9-Vu-9vi" secondAttribute="centerX" id="WCb-tr-BQy"/>
+                            <constraint firstItem="HS6-Rv-ZLO" firstAttribute="bottom" secondItem="Idr-VY-brL" secondAttribute="bottom" constant="50" id="g2y-2e-1Oi"/>
+                            <constraint firstItem="Idr-VY-brL" firstAttribute="leading" secondItem="HS6-Rv-ZLO" secondAttribute="leading" constant="50" id="haA-PI-BmR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NRQ-3h-3gW"/>
+                    <connections>
+                        <segue destination="hlm-O1-deK" kind="show" identifier="birthSegue" id="fVl-g4-qo8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7EM-cg-di5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3546" y="72"/>
+        </scene>
+        <!--Birth View Controller-->
+        <scene sceneID="ptC-dY-U17">
+            <objects>
+                <viewController id="hlm-O1-deK" customClass="BirthViewController" customModule="UserSetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6e-Jb-ztq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1M-d8-dgm" userLabel="Next Button" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="birthScreen.nextButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="hlm-O1-deK" eventType="touchUpInside" id="vLd-ha-Qmq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GHe-ce-cNI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P1M-d8-dgm" firstAttribute="centerX" secondItem="N6e-Jb-ztq" secondAttribute="centerX" id="HJ3-z5-an5"/>
+                            <constraint firstItem="P1M-d8-dgm" firstAttribute="leading" secondItem="GHe-ce-cNI" secondAttribute="leading" constant="50" id="fRV-IR-G0B"/>
+                            <constraint firstItem="GHe-ce-cNI" firstAttribute="bottom" secondItem="P1M-d8-dgm" secondAttribute="bottom" constant="50" id="yKH-kK-aVl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y6T-Er-fdp"/>
+                    <connections>
+                        <segue destination="Zbg-w8-PK3" kind="show" identifier="calorieSegue" id="Gll-H9-Zi9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okH-ei-WMS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4481" y="72"/>
+        </scene>
+        <!--Calorie View Controller-->
+        <scene sceneID="FkK-M0-SWd">
+            <objects>
+                <viewController id="Zbg-w8-PK3" customClass="CalorieViewController" customModule="UserSetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJ7-4o-Mm6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkP-ND-Liy" customClass="CustomButton" customModule="UserSetup" customModuleProvider="target">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="calorieScreen.finishButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="finishButtonTapped:" destination="Zbg-w8-PK3" eventType="touchUpInside" id="td7-AJ-KSy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Edo-rd-604"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Edo-rd-604" firstAttribute="bottom" secondItem="IkP-ND-Liy" secondAttribute="bottom" constant="50" id="1x6-bx-6fP"/>
+                            <constraint firstItem="IkP-ND-Liy" firstAttribute="centerX" secondItem="JJ7-4o-Mm6" secondAttribute="centerX" id="3vl-xm-2Mf"/>
+                            <constraint firstItem="IkP-ND-Liy" firstAttribute="leading" secondItem="Edo-rd-604" secondAttribute="leading" constant="50" id="Sxy-QE-YTM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vlS-2r-Muh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT0-uG-k9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5349" y="72"/>
         </scene>
     </scenes>
     <resources>

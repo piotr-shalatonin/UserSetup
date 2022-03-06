@@ -11,4 +11,8 @@ import UIKit
 class WelcomeViewController: UIViewController {
     var viewModel: WelcomeViewModel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "welcomeScreen.title".localized
+    }
 }

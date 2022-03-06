@@ -15,12 +15,26 @@
 		546B952627D11756006A2BD3 /* UserSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B952527D11756006A2BD3 /* UserSetupTests.swift */; };
 		546B953027D11756006A2BD3 /* UserSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B952F27D11756006A2BD3 /* UserSetupUITests.swift */; };
 		546B953227D11756006A2BD3 /* UserSetupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B953127D11756006A2BD3 /* UserSetupUITestsLaunchTests.swift */; };
-		546B954027D1EA8F006A2BD3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546B953F27D1EA8F006A2BD3 /* Colors.xcassets */; };
 		546B954227D1ECC9006A2BD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 546B954127D1ECC9006A2BD3 /* Localizable.strings */; };
 		546B954427D1ECE5006A2BD3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 546B954327D1ECE5006A2BD3 /* Localizable.stringsdict */; };
 		546B954727D1EE9A006A2BD3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B954627D1EE9A006A2BD3 /* CustomButton.swift */; };
 		546B954A27D1F112006A2BD3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B954927D1F112006A2BD3 /* WelcomeViewController.swift */; };
 		546B954C27D1F141006A2BD3 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B954B27D1F141006A2BD3 /* WelcomeViewModel.swift */; };
+		54979FEE27D49C6300902BA9 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FED27D49C6300902BA9 /* GenderViewController.swift */; };
+		54979FF027D49C7400902BA9 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FEF27D49C7400902BA9 /* GenderViewModel.swift */; };
+		54979FF327D49D2300902BA9 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FF227D49D2300902BA9 /* GlobalConstants.swift */; };
+		54979FF627D49EAA00902BA9 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FF527D49EAA00902BA9 /* ImportViewController.swift */; };
+		54979FF827D49EB900902BA9 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FF727D49EB900902BA9 /* ImportViewModel.swift */; };
+		54979FFB27D49F2F00902BA9 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FFA27D49F2F00902BA9 /* WeightViewController.swift */; };
+		54979FFD27D49F4A00902BA9 /* WeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54979FFC27D49F4A00902BA9 /* WeightViewModel.swift */; };
+		5497A00127D4A03000902BA9 /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00027D4A03000902BA9 /* BirthViewController.swift */; };
+		5497A00327D4A03F00902BA9 /* BirthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00227D4A03F00902BA9 /* BirthViewModel.swift */; };
+		5497A00527D4A05200902BA9 /* CalorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00427D4A05200902BA9 /* CalorieViewController.swift */; };
+		5497A00727D4A06200902BA9 /* CalorieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00627D4A06200902BA9 /* CalorieViewModel.swift */; };
+		5497A00A27D4A77100902BA9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5497A00927D4A77100902BA9 /* Colors.xcassets */; };
+		5497A00C27D4A7D200902BA9 /* Color+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00B27D4A7D200902BA9 /* Color+Constants.swift */; };
+		5497A00E27D4B36600902BA9 /* GlobalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00D27D4B36600902BA9 /* GlobalUtils.swift */; };
+		5497A01027D4B3C900902BA9 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497A00F27D4B3C900902BA9 /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +67,26 @@
 		546B952B27D11756006A2BD3 /* UserSetupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserSetupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		546B952F27D11756006A2BD3 /* UserSetupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupUITests.swift; sourceTree = "<group>"; };
 		546B953127D11756006A2BD3 /* UserSetupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		546B953F27D1EA8F006A2BD3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		546B954127D1ECC9006A2BD3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		546B954327D1ECE5006A2BD3 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		546B954627D1EE9A006A2BD3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		546B954927D1F112006A2BD3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		546B954B27D1F141006A2BD3 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		54979FED27D49C6300902BA9 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		54979FEF27D49C7400902BA9 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
+		54979FF227D49D2300902BA9 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		54979FF527D49EAA00902BA9 /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		54979FF727D49EB900902BA9 /* ImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
+		54979FFA27D49F2F00902BA9 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		54979FFC27D49F4A00902BA9 /* WeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewModel.swift; sourceTree = "<group>"; };
+		5497A00027D4A03000902BA9 /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
+		5497A00227D4A03F00902BA9 /* BirthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewModel.swift; sourceTree = "<group>"; };
+		5497A00427D4A05200902BA9 /* CalorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieViewController.swift; sourceTree = "<group>"; };
+		5497A00627D4A06200902BA9 /* CalorieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieViewModel.swift; sourceTree = "<group>"; };
+		5497A00927D4A77100902BA9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5497A00B27D4A7D200902BA9 /* Color+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Constants.swift"; sourceTree = "<group>"; };
+		5497A00D27D4B36600902BA9 /* GlobalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtils.swift; sourceTree = "<group>"; };
+		5497A00F27D4B3C900902BA9 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +137,9 @@
 		546B950D27D11754006A2BD3 /* UserSetup */ = {
 			isa = PBXGroup;
 			children = (
-				546B954827D1F0F4006A2BD3 /* Welcome */,
+				54979FF127D49D0A00902BA9 /* Global */,
 				546B954527D1EE6E006A2BD3 /* Controls */,
+				5497A00827D4A0BF00902BA9 /* Screens */,
 				546B953E27D1EA60006A2BD3 /* MyResources */,
 				546B950E27D11754006A2BD3 /* AppDelegate.swift */,
 				546B951027D11754006A2BD3 /* SceneDelegate.swift */,
@@ -142,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				546B951727D11756006A2BD3 /* Images.xcassets */,
-				546B953F27D1EA8F006A2BD3 /* Colors.xcassets */,
+				5497A00927D4A77100902BA9 /* Colors.xcassets */,
 				546B954127D1ECC9006A2BD3 /* Localizable.strings */,
 				546B954327D1ECE5006A2BD3 /* Localizable.stringsdict */,
 			);
@@ -164,6 +193,75 @@
 				546B954B27D1F141006A2BD3 /* WelcomeViewModel.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		54979FEC27D49C3C00902BA9 /* Gender */ = {
+			isa = PBXGroup;
+			children = (
+				54979FED27D49C6300902BA9 /* GenderViewController.swift */,
+				54979FEF27D49C7400902BA9 /* GenderViewModel.swift */,
+			);
+			path = Gender;
+			sourceTree = "<group>";
+		};
+		54979FF127D49D0A00902BA9 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				54979FF227D49D2300902BA9 /* GlobalConstants.swift */,
+				5497A00B27D4A7D200902BA9 /* Color+Constants.swift */,
+				5497A00D27D4B36600902BA9 /* GlobalUtils.swift */,
+				5497A00F27D4B3C900902BA9 /* String+Utils.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		54979FF427D49E6F00902BA9 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				54979FF527D49EAA00902BA9 /* ImportViewController.swift */,
+				54979FF727D49EB900902BA9 /* ImportViewModel.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		54979FF927D49F0400902BA9 /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				54979FFA27D49F2F00902BA9 /* WeightViewController.swift */,
+				54979FFC27D49F4A00902BA9 /* WeightViewModel.swift */,
+			);
+			path = Weight;
+			sourceTree = "<group>";
+		};
+		54979FFE27D49F9F00902BA9 /* Calorie */ = {
+			isa = PBXGroup;
+			children = (
+				5497A00427D4A05200902BA9 /* CalorieViewController.swift */,
+				5497A00627D4A06200902BA9 /* CalorieViewModel.swift */,
+			);
+			path = Calorie;
+			sourceTree = "<group>";
+		};
+		54979FFF27D49FF500902BA9 /* Birth */ = {
+			isa = PBXGroup;
+			children = (
+				5497A00027D4A03000902BA9 /* BirthViewController.swift */,
+				5497A00227D4A03F00902BA9 /* BirthViewModel.swift */,
+			);
+			path = Birth;
+			sourceTree = "<group>";
+		};
+		5497A00827D4A0BF00902BA9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				546B954827D1F0F4006A2BD3 /* Welcome */,
+				54979FEC27D49C3C00902BA9 /* Gender */,
+				54979FF427D49E6F00902BA9 /* Import */,
+				54979FF927D49F0400902BA9 /* Weight */,
+				54979FFF27D49FF500902BA9 /* Birth */,
+				54979FFE27D49F9F00902BA9 /* Calorie */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +370,8 @@
 			files = (
 				546B954227D1ECC9006A2BD3 /* Localizable.strings in Resources */,
 				546B951B27D11756006A2BD3 /* LaunchScreen.storyboard in Resources */,
-				546B954027D1EA8F006A2BD3 /* Colors.xcassets in Resources */,
 				546B951827D11756006A2BD3 /* Images.xcassets in Resources */,
+				5497A00A27D4A77100902BA9 /* Colors.xcassets in Resources */,
 				546B951627D11754006A2BD3 /* Main.storyboard in Resources */,
 				546B954427D1ECE5006A2BD3 /* Localizable.stringsdict in Resources */,
 			);
@@ -300,11 +398,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54979FF627D49EAA00902BA9 /* ImportViewController.swift in Sources */,
+				54979FF027D49C7400902BA9 /* GenderViewModel.swift in Sources */,
 				546B954727D1EE9A006A2BD3 /* CustomButton.swift in Sources */,
 				546B954C27D1F141006A2BD3 /* WelcomeViewModel.swift in Sources */,
 				546B954A27D1F112006A2BD3 /* WelcomeViewController.swift in Sources */,
+				54979FEE27D49C6300902BA9 /* GenderViewController.swift in Sources */,
+				5497A00127D4A03000902BA9 /* BirthViewController.swift in Sources */,
 				546B950F27D11754006A2BD3 /* AppDelegate.swift in Sources */,
+				54979FFB27D49F2F00902BA9 /* WeightViewController.swift in Sources */,
+				54979FFD27D49F4A00902BA9 /* WeightViewModel.swift in Sources */,
+				5497A00527D4A05200902BA9 /* CalorieViewController.swift in Sources */,
+				54979FF327D49D2300902BA9 /* GlobalConstants.swift in Sources */,
+				5497A01027D4B3C900902BA9 /* String+Utils.swift in Sources */,
+				5497A00727D4A06200902BA9 /* CalorieViewModel.swift in Sources */,
 				546B951127D11754006A2BD3 /* SceneDelegate.swift in Sources */,
+				5497A00C27D4A7D200902BA9 /* Color+Constants.swift in Sources */,
+				5497A00327D4A03F00902BA9 /* BirthViewModel.swift in Sources */,
+				5497A00E27D4B36600902BA9 /* GlobalUtils.swift in Sources */,
+				54979FF827D49EB900902BA9 /* ImportViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
