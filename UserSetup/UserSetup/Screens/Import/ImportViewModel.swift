@@ -8,4 +8,7 @@
 import Foundation
 
 class ImportViewModel: BaseViewModel {
+    var title: String {
+        "importScreen.title".localized
+    }
 }

@@ -24,7 +24,7 @@ class ImportViewController: UIViewController {
     }
     
     private func localize() {
-        title = "importScreen.title".localized
+        title = viewModel.title
     }
     
     @IBAction func importButtonTapped(_ sender: Any) {

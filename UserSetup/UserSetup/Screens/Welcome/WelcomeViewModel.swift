@@ -8,5 +8,7 @@
 import Foundation
 
 class WelcomeViewModel {
-    
+    var title: String {
+        "welcomeScreen.title".localized
+    }
 }

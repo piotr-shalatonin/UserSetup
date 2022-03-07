@@ -36,20 +36,16 @@ class WeightViewController: UIViewController {
     }
     
     private func localize() {
-        title = "weightScreen.title".localized
+        title = viewModel.title
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         getUserData()
         
         if !viewModel.validate() {
-            let message = "weightScreen.validationMessage".localized
-            let weightParam = viewModel.user.weightUnit == .kg ? String(GlobalConstants.User.minimumWeightKg) : String(GlobalConstants.User.minimumWeightPounds)
-            let weightUnitsParam = viewModel.user.weightUnit == .kg ? "common.kg".localized : "common.pounds".localized
-            let formattedMessage = String(format: message, weightParam, weightUnitsParam)
             showAlert(
-                title: "common.alert.title".localized,
-                message: formattedMessage
+                title: viewModel.validationAlertTitle,
+                message: viewModel.validationAlertMessage
             )
             return
         }
@@ -73,12 +69,8 @@ class WeightViewController: UIViewController {
     }
     
     func setUserData() {
-        let weight = viewModel.user.weight ?? GlobalConstants.User.defaultWeight
-        weightTextField.text = String(format: "%.1f", weight)
-        
-        let weightUnit = viewModel.user.weightUnit ?? GlobalConstants.User.defaultWeightUnit
-        useMetricSwitch.isOn = weightUnit == .kg
-        
+        weightTextField.text = viewModel.weightTextFieldText
+        useMetricSwitch.isOn = viewModel.useMetricsSwitchOn
         helpLabel.text = viewModel.helpLabelText
     }
     

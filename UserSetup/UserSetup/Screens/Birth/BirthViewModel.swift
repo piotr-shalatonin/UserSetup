@@ -21,4 +21,20 @@ class BirthViewModel: BaseViewModel {
         return true
     }
     
+    var title: String {
+        "birthScreen.title".localized
+    }
+    
+    var datePickerDate: Date {
+        if let dateOfBirth = user.dateOfBirth {
+            return dateOfBirth
+        } else {
+            return Date()
+        }
+    }
+    
+    var birthdayTextFieldText: String {
+        GlobalUtils.string(from: datePickerDate, format: GlobalConstants.UI.dateOfBirthFormat)
+    }
+    
 }

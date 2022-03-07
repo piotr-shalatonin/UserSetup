@@ -48,7 +48,7 @@ class BirthViewController: UIViewController {
     }
     
     private func localize() {
-        title = "birthScreen.title".localized
+        title = viewModel.title
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -82,11 +82,8 @@ class BirthViewController: UIViewController {
     }
     
     func setUserData() {
-        if let dateOfBirth = viewModel.user.dateOfBirth {
-            datePicker.date = dateOfBirth
-        }
-        
-        birthdayTextField.text = GlobalUtils.string(from: datePicker.date, format: GlobalConstants.UI.dateOfBirthFormat)
+        datePicker.date = viewModel.datePickerDate
+        birthdayTextField.text = viewModel.birthdayTextFieldText
     }
     
     func getUserData() {

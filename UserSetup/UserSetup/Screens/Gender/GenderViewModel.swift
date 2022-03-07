@@ -13,4 +13,8 @@ class GenderViewModel: BaseViewModel {
         user.gender = gender
     }
     
+    var title: String {
+        "genderScreen.title".localized
+    }
+    
 }

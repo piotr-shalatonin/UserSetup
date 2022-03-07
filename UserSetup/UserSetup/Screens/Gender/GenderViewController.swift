@@ -19,7 +19,7 @@ class GenderViewController: UIViewController {
     }
     
     private func localize() {
-        title = "genderScreen.title".localized
+        title = viewModel.title
     }
     
     @IBAction func maleButtonTapped(_ sender: Any) {
