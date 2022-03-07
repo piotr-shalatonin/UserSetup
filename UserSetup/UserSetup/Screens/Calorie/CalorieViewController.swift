@@ -18,8 +18,25 @@ class CalorieViewController: UIViewController {
         super.viewDidLoad()
         
         localize()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         viewModel.loadData()
+        setUserData()
+    }
+    
+    func setUserData() {
+        let gender = viewModel.user.gender ?? .male
+        let calorieCounter = CalorieCounterCreator.createCalorieCounter(by: gender)
+        
+        let dailyCalorieBudget = calorieCounter.calculateDailyCalorieBudget(
+            ageInYears: viewModel.user.ageInYears,
+            weightInKg: viewModel.user.weightInKg,
+            heightInMeters: viewModel.user.heightInMeters
+        )
+        budgetLabel.text = String(dailyCalorieBudget)
     }
     
     private func localize() {

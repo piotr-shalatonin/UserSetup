@@ -13,7 +13,13 @@ class ImportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         localize()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         viewModel.loadData()
     }
     

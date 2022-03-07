@@ -7,23 +7,6 @@
 
 import Foundation
 
-enum Gender: Int {
-    case male = 0
-    case female = 1
-}
-
-enum WeightUnit : Int {
-    case kg = 0
-    case pound = 1
-}
-
-struct User {
-    var gender: Gender?
-    var weight: Float?
-    var weightUnit: WeightUnit?
-    var dateOfBirth: Date?
-}
-
 protocol StorageManagerProtocol {
     func save(user: User)
     func getUser() -> User

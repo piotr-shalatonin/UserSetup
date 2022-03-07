@@ -39,6 +39,11 @@
 		54A0947E27D5451900A00B4D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947D27D5451900A00B4D /* StorageManager.swift */; };
 		54A0948027D55D8B00A00B4D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */; };
 		54A0948227D5680700A00B4D /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948127D5680700A00B4D /* UIViewController+Utils.swift */; };
+		54A0948527D5DAF600A00B4D /* MaleCalorieCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948427D5DAF600A00B4D /* MaleCalorieCounter.swift */; };
+		54A0948727D5DB0900A00B4D /* FemaleCalorieCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948627D5DB0900A00B4D /* FemaleCalorieCounter.swift */; };
+		54A0948927D5DB2A00A00B4D /* CalorieCounterCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948827D5DB2A00A00B4D /* CalorieCounterCreator.swift */; };
+		54A0948B27D5DBE600A00B4D /* BaseCalorieCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948A27D5DBE600A00B4D /* BaseCalorieCounter.swift */; };
+		54A0948D27D6259100A00B4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0948C27D6259100A00B4D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		54A0947D27D5451900A00B4D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		54A0947F27D55D8B00A00B4D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		54A0948127D5680700A00B4D /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		54A0948427D5DAF600A00B4D /* MaleCalorieCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleCalorieCounter.swift; sourceTree = "<group>"; };
+		54A0948627D5DB0900A00B4D /* FemaleCalorieCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleCalorieCounter.swift; sourceTree = "<group>"; };
+		54A0948827D5DB2A00A00B4D /* CalorieCounterCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCounterCreator.swift; sourceTree = "<group>"; };
+		54A0948A27D5DBE600A00B4D /* BaseCalorieCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCalorieCounter.swift; sourceTree = "<group>"; };
+		54A0948C27D6259100A00B4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +257,7 @@
 		54979FFE27D49F9F00902BA9 /* Calorie */ = {
 			isa = PBXGroup;
 			children = (
+				54A0948327D5DAD100A00B4D /* CalorieCounter */,
 				5497A00427D4A05200902BA9 /* CalorieViewController.swift */,
 				5497A00627D4A06200902BA9 /* CalorieViewModel.swift */,
 			);
@@ -279,9 +290,21 @@
 		54A0947C27D544ED00A00B4D /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				54A0948C27D6259100A00B4D /* User.swift */,
 				54A0947D27D5451900A00B4D /* StorageManager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		54A0948327D5DAD100A00B4D /* CalorieCounter */ = {
+			isa = PBXGroup;
+			children = (
+				54A0948A27D5DBE600A00B4D /* BaseCalorieCounter.swift */,
+				54A0948427D5DAF600A00B4D /* MaleCalorieCounter.swift */,
+				54A0948627D5DB0900A00B4D /* FemaleCalorieCounter.swift */,
+				54A0948827D5DB2A00A00B4D /* CalorieCounterCreator.swift */,
+			);
+			path = CalorieCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +442,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				54979FF627D49EAA00902BA9 /* ImportViewController.swift in Sources */,
+				54A0948927D5DB2A00A00B4D /* CalorieCounterCreator.swift in Sources */,
+				54A0948527D5DAF600A00B4D /* MaleCalorieCounter.swift in Sources */,
+				54A0948B27D5DBE600A00B4D /* BaseCalorieCounter.swift in Sources */,
 				54A0948027D55D8B00A00B4D /* BaseViewModel.swift in Sources */,
 				54979FF027D49C7400902BA9 /* GenderViewModel.swift in Sources */,
 				546B954727D1EE9A006A2BD3 /* CustomButton.swift in Sources */,
@@ -435,6 +461,8 @@
 				54A0947B27D52A5300A00B4D /* CustomLabel.swift in Sources */,
 				54979FF327D49D2300902BA9 /* GlobalConstants.swift in Sources */,
 				5497A01027D4B3C900902BA9 /* String+Utils.swift in Sources */,
+				54A0948D27D6259100A00B4D /* User.swift in Sources */,
+				54A0948727D5DB0900A00B4D /* FemaleCalorieCounter.swift in Sources */,
 				5497A00727D4A06200902BA9 /* CalorieViewModel.swift in Sources */,
 				546B951127D11754006A2BD3 /* SceneDelegate.swift in Sources */,
 				5497A00C27D4A7D200902BA9 /* Color+Constants.swift in Sources */,

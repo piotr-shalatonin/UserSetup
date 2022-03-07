@@ -20,15 +20,20 @@ class BirthViewController: UIViewController {
         localize()
         
         setupControls()
-        
-        viewModel.loadData()
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        viewModel.loadData()
         setUserData()
+        birthdayTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        birthdayTextField.resignFirstResponder()
     }
     
     private func setupControls() {

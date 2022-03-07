@@ -19,13 +19,20 @@ class WeightViewController: UIViewController {
         super.viewDidLoad()
         
         localize()
-        viewModel.loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        viewModel.loadData()
         setUserData()
+        
+        weightTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        weightTextField.resignFirstResponder()
     }
     
     private func localize() {

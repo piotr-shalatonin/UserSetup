@@ -25,5 +25,7 @@ enum GlobalConstants {
         static let minimumWeightKg: Float = 20
         static let minimumWeightPounds: Float = 40
         static let minimumAge: Int = 13
+        
+        static let averageHumanHeightInMeters: Float = 1.7
     }
 }
