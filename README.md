@@ -20,17 +20,27 @@
    * Add HealthKit capability
    * Use HKHealthStore class
    * Check if HealthKit available on the device:
+```
        HKHealthStore.isHealthDataAvailable()
+```
    * healthStore.requestAuthorization(), process error
    * Get date of birth:
+```
        let dateOfBirth = try healthStore.dateOfBirthComponents()
+```
    * Get gender:
+```
        let gender = try healthStore.biologicalSex()
+```
    * Get weight, process error:
+```
        let weightType = HKSampleType.quantityType (forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
        let queryWeight = HKSampleQuery(sampleType: weightType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil)
+```
    * Get height, process error:
+```
        let heightType = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!
        let queryHeight = HKSampleQuery(sampleType: heightType, predicate: nil, limit: HKObjectQueryNoLimit, sortDescriptors: nil)
+```
 
 
